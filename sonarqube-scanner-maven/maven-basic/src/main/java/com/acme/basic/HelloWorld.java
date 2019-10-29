@@ -1,4 +1,8 @@
 package com.acme.basic;
+package com.javacodegeeks.corejava.util.logging
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class HelloWorld {
 
