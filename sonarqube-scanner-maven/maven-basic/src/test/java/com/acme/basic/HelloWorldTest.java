@@ -1,11 +1,8 @@
-package com.acme.basic;
+import com.company.CompareToTester;
 
-import org.junit.Test;
-
-public class HelloWorldTest {
-
-  @Test
-  public void sayHello() {
-    new HelloWorld().sayHello();
-  }
+@Test
+public void testDoSomething() {
+  MyClass myClass = new MyClass();
+  assertNull(myClass.doSomething());  // JUnit assertion
+  assertThat(myClass.doSomething()).isNull();  // Fest assertion
 }
