@@ -11,6 +11,7 @@ version = '1.0'
 sonarqube {
     properties {
         property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
+        property "sonar.jacoco.reportPaths", "build/jacoco/junitPlatformTest.exec"
     }
 }
 
