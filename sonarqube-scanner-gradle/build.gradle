@@ -8,6 +8,11 @@ plugins {
 description = 'Example of SonarQube Scanner for Gradle Usage'
 version = '1.0'
 
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
 sonarqube {
     properties {
         property 'sonar.projectName', 'MyExample Library'
