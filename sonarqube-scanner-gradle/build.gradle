@@ -10,14 +10,14 @@ version = '1.0'
 
 jacoco {
     toolVersion = "0.8.5"
-    reportsDir = file("$buildDir/customJacocoReportDir")
 }
 
 sonarqube {
     properties {
         property 'sonar.projectName', 'MyExample Library'
         property 'sonar.projectKey', 'MyExampleLib'
-       property 'sonar.core.codeCoveragePlugin', 'jacoco'
+        property "sonar.sourceEncoding", "UTF-8"
+      // property 'sonar.core.codeCoveragePlugin', 'jacoco'
         //property 'sonar.coverage.jacoco.xmlReportPaths', '$(System.DefaultWorkingDirectory)/test-results/test/jacoco.xml'
     }
 }
@@ -39,7 +39,8 @@ dependencies {
 
 // Define the main class for the application
 mainClassName = 'App'
-test{
+test {
+    useJUnitPlatform()
 }
 jacocoTestReport {
         group = "Reporting"
@@ -49,6 +50,6 @@ jacocoTestReport {
             //to create coverage report in html
            // html.destination file("${buildDir}/reports/coverage")
             //for XML
-           // xml.destination file("${buildDir}/reports/jacoco.xml")
+            xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
         }
     }
