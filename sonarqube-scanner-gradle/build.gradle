@@ -49,6 +49,6 @@ jacocoTestReport {
             //to create coverage report in html
            // html.destination file("${buildDir}/reports/coverage")
             //for XML
-            xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+           // xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
         }
     }
