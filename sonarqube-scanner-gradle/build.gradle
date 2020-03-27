@@ -32,18 +32,17 @@ repositories {
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:21.0'
-
+    compile 'junit:junit:4.12'
     // Use JUnit test framework
-    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.5.2')
+   // testImplementation('org.junit.jupiter:junit-jupiter-engine:5.5.2')
 }
 
 // Define the main class for the application
 mainClassName = 'App'
 test {
-    useJUnitPlatform()
+   
 }
 jacocoTestReport {
-        group = "Reporting"
         reports {
             xml.enabled true
             csv.enabled false
